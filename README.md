@@ -39,14 +39,21 @@ enum ShowType {
 ```
 
 ### 添加新视图卡
-
 1.添加临时展示视图卡
+```swift
 let configView = ScaleView()
 configView.title = "配置环境"
 view.addSubview(configView)
 configView.frame = CGRect(x: 40, y: (view.frame.height - 300)/2.0, width: view.frame.width - 80, height: 300)
 scale.addView(view: configView)
+```
 2.添加轮动视图卡
+```swift
 let configView = ScaleView()
 configView.title = "配置环境"
 scale.showNewView(view: configView)
+```
+### 删除视图卡
+```swift
+scale.removeView(title: "配置环境")
+```
